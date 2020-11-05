@@ -1,0 +1,600 @@
+mkdir: `/user': File exists
+mkdir: `/user/jack': File exists
+Deleted input
+mkdir: `output': File exists
+Deleted input/movies.csv
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/jack/Desktop/ca4022/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/jack/Desktop/ca4022/hadoop-3.3.0/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 4ebe72eb-5eb4-49ea-af62-7f90a16b014d
+
+Logging initialized using configuration in jar:file:/home/jack/Desktop/ca4022/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true
+Hive Session ID = b8b71056-1fa8-4740-b491-00dbadfaecbb
+OK
+Time taken: 1.935 seconds
+OK
+Time taken: 0.527 seconds
+Loading data to table default.movies
+OK
+Time taken: 0.474 seconds
+OK
+Time taken: 0.121 seconds
+OK
+Time taken: 0.051 seconds
+Loading data to table default.ratings
+OK
+Time taken: 0.169 seconds
+OK
+Time taken: 0.104 seconds
+OK
+Time taken: 0.059 seconds
+Loading data to table default.tags
+OK
+Time taken: 0.14 seconds
+OK
+Time taken: 0.108 seconds
+OK
+Time taken: 0.057 seconds
+Loading data to table default.links
+OK
+Time taken: 0.176 seconds
+OK
+title	genre
+title	genre
+Toy Story	(Adventure,Animation,Children,Comedy,Fantasy)
+Jumanji	(Adventure,Children,Fantasy)
+Grumpier Old Men	(Comedy,Romance)
+Waiting to Exhale	(Comedy,Drama,Romance)
+Father of the Bride Part II	(Comedy)
+Heat	(Action,Crime,Thriller)
+Sabrina	(Comedy,Romance)
+Tom and Huck	(Adventure,Children)
+Sudden Death	(Action)
+Time taken: 1.47 seconds, Fetched: 10 row(s)
+Query ID = jack_20201105160020_79d30014-d9e3-49d9-b79c-1d74a8ca821f
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:00:23,202 Stage-1 map = 100%,  reduce = 0%
+2020-11-05 16:00:24,208 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1062068963_0001
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/mostDiverseMovies
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 968934 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+title	genre
+Time taken: 3.407 seconds
+Query ID = jack_20201105160024_3884744e-7dab-4fb7-9bfb-250206af0cc1
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:00:25,709 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1025980635_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 5936380 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+rating
+NULL
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+Time taken: 1.464 seconds, Fetched: 11 row(s)
+OK
+Time taken: 0.075 seconds
+OK
+movieid	ratingcount	avgrating	bestrating	worstrating
+Time taken: 0.314 seconds
+OK
+Time taken: 0.077 seconds
+OK
+movieid	title	ratingcount	avgrating	bestrating	worstrating	genre
+Time taken: 0.252 seconds
+No Stats for default@ratings, Columns: rating, movieid
+No Stats for default@movies, Columns: genre, movieid, title
+No Stats for default@movies, Columns: year, genre, movieid, title
+Query ID = jack_20201105160026_6a6458c8-eb9c-4f1f-81f0-d30a2a46aa67
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:00:28,239 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1607746499_0003
+SLF4J: Found binding in [jar:file:/home/jack/Desktop/ca4022/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.2020-11-05 16:00:33	Starting to launch local task to process map join;	maximum memory = 239075328
+
+2020-11-05 16:00:35	Uploaded 1 File to: file:/tmp/jack/4ebe72eb-5eb4-49ea-af62-7f90a16b014d/hive_2020-11-05_16-00-26_472_1750091854321015263-1/-local-10007/HashTable-Stage-4/MapJoin-mapfile01--.hashtable (617300 bytes)
+2020-11-05 16:00:35	Dump the side-table for tag: 1 with group count: 9742 into file: file:/tmp/jack/4ebe72eb-5eb4-49ea-af62-7f90a16b014d/hive_2020-11-05_16-00-26_472_1750091854321015263-1/-local-10007/HashTable-Stage-4/MapJoin-mapfile11--.hashtable
+2020-11-05 16:00:35	Uploaded 1 File to: file:/tmp/jack/4ebe72eb-5eb4-49ea-af62-7f90a16b014d/hive_2020-11-05_16-00-26_472_1750091854321015263-1/-local-10007/HashTable-Stage-4/MapJoin-mapfile11--.hashtable (587970 bytes)
+2020-11-05 16:00:35	End of local task; Time Taken: 1.697 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:00:37,599 Stage-4 map = 100%,  reduce = 100%
+Ended Job = job_local407224188_0004
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 10903826 HDFS Write: 0 SUCCESS
+Stage-Stage-4:  HDFS Read: 10903826 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+t.movieid	t.title	t.ratingcount	t.avgrating	t.bestrating	t.worstrating	t.genre	m.movieid	m.title	m.year	m.genre
+356	Forrest Gump	329	4.164133738601824	5.0	0.5	(Comedy,Drama,Romance,War)	356	Forrest Gump	1994	(Comedy,Drama,Romance,War)
+318	Shawshank Redemption, The	317	4.429022082018927	5.0	1.0	(Crime,Drama)	318	Shawshank Redemption, The	1994	(Crime,Drama)
+296	Pulp Fiction	307	4.197068403908795	5.0	0.5	(Comedy,Crime,Drama,Thriller)	296	Pulp Fiction	1994	(Comedy,Crime,Drama,Thriller)
+593	Silence of the Lambs, The	279	4.161290322580645	5.0	0.5	(Crime,Horror,Thriller)	593	Silence of the Lambs, The	1991	(Crime,Horror,Thriller)
+2571	Matrix, The	278	4.192446043165468	5.0	0.5	(Action,Sci-Fi,Thriller)	2571	Matrix, The	1999	(Action,Sci-Fi,Thriller)
+260	Star Wars: Episode IV - A New Hope	251	4.231075697211155	5.0	0.5	(Action,Adventure,Sci-Fi)	260	Star Wars: Episode IV - A New Hope	1977	(Action,Adventure,Sci-Fi)
+480	Jurassic Park	238	3.75	5.0	0.5	(Action,Adventure,Sci-Fi,Thriller)	480	Jurassic Park	1993	(Action,Adventure,Sci-Fi,Thriller)
+110	Braveheart	237	4.031645569620253	5.0	0.5	(Action,Drama,War)	110	Braveheart	1995	(Action,Drama,War)
+589	Terminator 2: Judgment Day	224	3.970982142857143	5.0	0.5	(Action,Sci-Fi)	589	Terminator 2: Judgment Day	1991	(Action,Sci-Fi)
+527	Schindler's List	220	4.225	5.0	0.5	(Drama,War)	527	Schindler's List	1993	(Drama,War)
+Time taken: 11.143 seconds, Fetched: 10 row(s)
+No Stats for default@ratings, Columns: rating, movieid
+No Stats for default@movies, Columns: genre, movieid, title
+No Stats for default@movies, Columns: year, movieid
+Query ID = jack_20201105160037_386a227d-0394-40cb-bf13-9eff10d546a4
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:00:39,441 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1791116559_0005
+SLF4J: Found binding in [jar:file:/home/jack/Desktop/ca4022/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2020-11-05 16:00:47	Dump the side-table for tag: 1 with group count: 9742 into file: file:/tmp/jack/4ebe72eb-5eb4-49ea-af62-7f90a16b014d/hive_2020-11-05_16-00-37_629_1394935226206530618-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile21--.hashtable
+2020-11-05 16:00:47	Uploaded 1 File to: file:/tmp/jack/4ebe72eb-5eb4-49ea-af62-7f90a16b014d/hive_2020-11-05_16-00-37_629_1394935226206530618-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile21--.hashtable (237646 bytes)
+2020-11-05 16:00:47	Dump the side-table for tag: 1 with group count: 9742 into file: file:/tmp/jack/4ebe72eb-5eb4-49ea-af62-7f90a16b014d/hive_2020-11-05_16-00-37_629_1394935226206530618-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile31--.hashtable
+2020-11-05 16:00:47	Uploaded 1 File to: file:/tmp/jack/4ebe72eb-5eb4-49ea-af62-7f90a16b014d/hive_2020-11-05_16-00-37_629_1394935226206530618-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile31--.hashtable (587970 bytes)
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:00:49,193 Stage-4 map = 100%,  reduce = 100%
+Ended Job = job_local1209732568_0006
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/mostRatedMovies
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 15871272 HDFS Write: 0 SUCCESS
+Stage-Stage-4:  HDFS Read: 15871272 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+t.movieid	t.title	t.ratingcount	t.avgrating	t.bestrating	t.worstrating	t.genre	m.year
+Time taken: 11.589 seconds
+Query ID = jack_20201105160049_356bfcaf-8ecf-42f4-980f-8f98b251e67d
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:00:50,922 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local747499798_0007
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/jack/Desktop/ca4022/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/jack/Desktop/ca4022/hadoop-3.3.0/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:00,888 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local162696208_0008
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 20838718 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 20838718 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+avgrating	title
+4.429022082018927	Shawshank Redemption, The
+4.2890625	Godfather, The
+4.272935779816514	Fight Club
+4.25968992248062	Godfather: Part II, The
+4.252336448598131	Departed, The
+4.25	Goodfellas
+4.238255033557047	Dark Knight, The
+4.237745098039215	Usual Suspects, The
+4.232394366197183	Princess Bride, The
+4.231075697211155	Star Wars: Episode IV - A New Hope
+Time taken: 11.686 seconds, Fetched: 10 row(s)
+OK
+Time taken: 0.145 seconds
+OK
+movieid	fivestarratingcount	fourstarratingcount	threestarratingcount	twostarratingcount	onestarratingcount	ratingcount
+Time taken: 0.182 seconds
+WARNING: Comparing a bigint and a double may result in a loss of precision.
+Query ID = jack_20201105160101_b1fcd77b-5e46-4b3f-a6f9-e07d5ea151a8
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:02,875 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1500289360_0009
+
+
+SLF4J: Found binding in [jar:file:/home/jack/Desktop/ca4022/hadoop-3.3.0/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:12,928 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local813329730_0010
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/majorityFiveStars
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 25806164 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 25806164 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+m.title	fivestarratingcount	fourstarratingcount	threestarratingcount	twostarratingcount	onestarratingcount	ratingcount
+Time taken: 11.687 seconds
+Query ID = jack_20201105160112_9cd4d9a3-81a8-44f8-8847-693230369cdc
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:14,512 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1746146935_0011
+
+
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+2020-11-05 16:01:20	Starting to launch local task to process map join;	maximum memory = 239075328
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:23,803 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local852568848_0012
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/ratingBreakdown
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 30773610 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 30773610 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+m.title	fivestarratingcount	fourstarratingcount	threestarratingcount	twostarratingcount	onestarratingcount	ratingcount
+Time taken: 10.861 seconds
+Query ID = jack_20201105160123_5ab74d3b-08b5-4a4d-8f1e-e27e75f488fa
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:25,235 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local525169734_0013
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:26,658 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1777643089_0014
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/totalRatings
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 35741056 HDFS Write: 0 SUCCESS
+Stage-Stage-2:  HDFS Read: 35741056 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+fivestars	fourstars	threestars	twostars	onestar
+Time taken: 2.843 seconds
+Query ID = jack_20201105160126_e88e06b1-80ed-46fd-b2ae-466b0d4ddf47
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:28,079 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local780976386_0015
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:29,248 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1803774662_0016
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/nicestUsers
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 40708502 HDFS Write: 0 SUCCESS
+Stage-Stage-2:  HDFS Read: 40708502 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+userid	ratingcount	avgrating
+Time taken: 2.585 seconds
+Added resources: [/home/jack/Desktop/ca4022/mapreduce/genre_col_to_row.py]
+Query ID = jack_20201105160129_bdbacd49-07fe-4213-a8be-b63880e9b7d9
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:30,829 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1564175082_0017
+
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+2020-11-05 16:01:38	End of local task; Time Taken: 2.023 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 2 out of 2
+Number of reduce tasks is set to 0 since there's no reduce operator
+Job running in-process (local Hadoop)
+2020-11-05 16:01:40,409 Stage-4 map = 100%,  reduce = 0%
+Ended Job = job_local1295976885_0018
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/genreBreakdown
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 45675948 HDFS Write: 0 SUCCESS
+Stage-Stage-4:  HDFS Read: 22837974 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+genre	nummoviesingenre	avgratings	numratings
+Time taken: 11.123 seconds
+Query ID = jack_20201105160140_1404208c-45b7-4024-a448-25b768fc1408
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:41,810 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1430716399_0019
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:42,997 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1168407844_0020
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 45913268 HDFS Write: 0 SUCCESS
+Stage-Stage-2:  HDFS Read: 45913268 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+occurrence	tag
+131	In Netflix queue
+36	atmospheric
+24	thought-provoking
+24	superhero
+23	Disney
+23	surreal
+23	funny
+22	religion
+21	dark comedy
+21	psychology
+Time taken: 2.573 seconds, Fetched: 10 row(s)
+Query ID = jack_20201105160143_7c30fa24-8ce9-4334-a915-97c7c46aeeb6
+Total jobs = 2
+
+
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:52,306 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1934199376_0021
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:01:53,500 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local1451885128_0022
+MapReduce Jobs Launched: 
+Stage-Stage-2:  HDFS Read: 46873946 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 46873946 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+tagcount	title
+181	Pulp Fiction
+54	Fight Club
+41	2001: A Space Odyssey
+35	Léon: The Professional (a.k.a. The Professional) (Léon)
+34	Eternal Sunshine of the Spotless Mind
+32	Big Lebowski, The
+29	Donnie Darko
+26	Star Wars: Episode IV - A New Hope
+26	Inception
+19	Suicide Squad
+Time taken: 10.523 seconds, Fetched: 10 row(s)
+Query ID = jack_20201105160153_86970a5f-8cf5-4412-8484-5472fe166b8d
+Total jobs = 2
+
+
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:02:02,914 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local238062446_0023
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:02:04,239 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local235762840_0024
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/controversialMovies
+MapReduce Jobs Launched: 
+Stage-Stage-2:  HDFS Read: 51841392 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 51841392 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+ratingvariance	title	m.movieid
+Time taken: 10.719 seconds
+Query ID = jack_20201105160204_753c8a61-ceb6-4d4f-b4e5-cb59f4f9b584
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:02:05,792 Stage-1 map = 0%,  reduce = 0%
+2020-11-05 16:02:06,795 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local466158133_0025
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2020-11-05 16:02:08,114 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local20521082_0026
+Moving data to local directory /home/jack/Desktop/ca4022/output/hive_analysis/dailyRatings
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 56808838 HDFS Write: 0 SUCCESS
+Stage-Stage-2:  HDFS Read: 56808838 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+newdate	dayofweek	avgrating	ratingcount
+Time taken: 3.849 seconds
+OK
+Time taken: 0.091 seconds
+OK
+newdate	dayofweek	avgrating	ratingcount
+Time taken: 0.102 seconds

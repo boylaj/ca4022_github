@@ -1,0 +1,183 @@
+mkdir: `/user': File exists
+mkdir: `/user/jack': File exists
+Deleted input
+Deleted output
+2020-11-05 15:53:47,362 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL
+2020-11-05 15:53:47,363 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE
+2020-11-05 15:53:47,364 INFO pig.ExecTypeProvider: Picked MAPREDUCE as the ExecType
+2020-11-05 15:53:47,405 [main] INFO  org.apache.pig.Main - Apache Pig version 0.17.0 (r1797386) compiled Jun 02 2017, 15:41:58
+2020-11-05 15:53:47,405 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/jack/Desktop/ca4022/pig_1604591627400.log
+2020-11-05 15:53:47,663 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/jack/.pigbootup not found
+2020-11-05 15:53:47,741 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2020-11-05 15:53:47,741 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://localhost:9000
+2020-11-05 15:53:48,152 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-movielens_cleaning.pig-5dc195d7-5751-434d-8098-dc7971ec5441
+2020-11-05 15:53:48,152 [main] WARN  org.apache.pig.PigServer - ATS is disabled since yarn.timeline-service.enabled set to false
+2020-11-05 15:53:48,894 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.textoutputformat.separator is deprecated. Instead, use mapreduce.output.textoutputformat.separator
+2020-11-05 15:53:48,903 [main] INFO  org.apache.pig.tools.pigstats.ScriptState - Pig features used in the script: FILTER
+2020-11-05 15:53:48,921 [main] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.
+2020-11-05 15:53:48,943 [main] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer - {RULES_ENABLED=[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, NestedLimitOptimizer, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}
+2020-11-05 15:53:48,999 [main] INFO  org.apache.pig.impl.util.SpillableMemoryManager - Selected heap (PS Old Gen) of size 699400192 to monitor. collectionUsageThreshold = 489580128, usageThreshold = 489580128
+2020-11-05 15:53:49,039 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler - File concatenation threshold: 100 optimistic? false
+2020-11-05 15:53:49,060 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size before optimization: 1
+2020-11-05 15:53:49,060 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size after optimization: 1
+2020-11-05 15:53:49,147 [main] INFO  org.apache.hadoop.metrics2.impl.MetricsConfig - Loaded properties from hadoop-metrics2.properties
+2020-11-05 15:53:49,222 [main] INFO  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - Scheduled Metric snapshot period at 10 second(s).
+2020-11-05 15:53:49,222 [main] INFO  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system started
+2020-11-05 15:53:49,248 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.MRScriptState - Pig script settings are added to the job
+2020-11-05 15:53:49,253 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.reduce.markreset.buffer.percent is deprecated. Instead, use mapreduce.reduce.markreset.buffer.percent
+2020-11-05 15:53:49,253 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - mapred.job.reduce.markreset.buffer.percent is not set, set to default 0.3
+2020-11-05 15:53:49,255 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.output.compress is deprecated. Instead, use mapreduce.output.fileoutputformat.compress
+2020-11-05 15:53:49,257 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - This job cannot be converted run in-process
+2020-11-05 15:53:49,267 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.submit.replication is deprecated. Instead, use mapreduce.client.submit.file.replication
+2020-11-05 15:53:49,457 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/jack/Desktop/ca4022/pig-0.17.0/lib/piggybank.jar to DistributedCache through /tmp/temp-2038844801/tmp313689471/piggybank.jar
+2020-11-05 15:53:49,511 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/jack/Desktop/ca4022/pig-0.17.0/pig-0.17.0-core-h2.jar to DistributedCache through /tmp/temp-2038844801/tmp625007641/pig-0.17.0-core-h2.jar
+2020-11-05 15:53:49,541 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/jack/Desktop/ca4022/pig-0.17.0/lib/automaton-1.11-8.jar to DistributedCache through /tmp/temp-2038844801/tmp-1064825506/automaton-1.11-8.jar
+2020-11-05 15:53:49,562 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/jack/Desktop/ca4022/pig-0.17.0/lib/antlr-runtime-3.4.jar to DistributedCache through /tmp/temp-2038844801/tmp1006127472/antlr-runtime-3.4.jar
+2020-11-05 15:53:49,580 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/jack/Desktop/ca4022/pig-0.17.0/lib/joda-time-2.9.3.jar to DistributedCache through /tmp/temp-2038844801/tmp-1104623001/joda-time-2.9.3.jar
+2020-11-05 15:53:49,588 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting up single store job
+2020-11-05 15:53:49,595 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Key [pig.schematuple] is false, will not generate code.
+2020-11-05 15:53:49,595 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Starting process to move generated code to distributed cacche
+2020-11-05 15:53:49,595 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Setting key [pig.schematuple.classes] with classes to deserialize []
+2020-11-05 15:53:49,648 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 1 map-reduce job(s) waiting for submission.
+2020-11-05 15:53:49,655 [JobControl] WARN  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system already initialized!
+2020-11-05 15:53:49,671 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2020-11-05 15:53:49,727 [JobControl] WARN  org.apache.hadoop.mapreduce.JobResourceUploader - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-05 15:53:49,755 [JobControl] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input files to process : 1
+2020-11-05 15:53:49,755 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+2020-11-05 15:53:49,796 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths (combined) to process : 1
+2020-11-05 15:53:49,816 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - number of splits:1
+2020-11-05 15:53:50,025 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Submitting tokens for job: job_local1948336991_0001
+2020-11-05 15:53:50,025 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Executing with tokens: []
+2020-11-05 15:53:50,252 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Creating symlink: /tmp/hadoop-jack/mapred/local/job_local1948336991_0001_d5eabc55-b199-4d00-bd77-d5bbc089b514/piggybank.jar <- /home/jack/Desktop/ca4022/piggybank.jar
+2020-11-05 15:53:50,264 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Localized hdfs://localhost:9000/tmp/temp-2038844801/tmp313689471/piggybank.jar as file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_d5eabc55-b199-4d00-bd77-d5bbc089b514/piggybank.jar
+2020-11-05 15:53:50,334 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Creating symlink: /tmp/hadoop-jack/mapred/local/job_local1948336991_0001_28f3e8b6-e29f-4551-b7a4-4f5d18ef6200/pig-0.17.0-core-h2.jar <- /home/jack/Desktop/ca4022/pig-0.17.0-core-h2.jar
+2020-11-05 15:53:50,337 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Localized hdfs://localhost:9000/tmp/temp-2038844801/tmp625007641/pig-0.17.0-core-h2.jar as file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_28f3e8b6-e29f-4551-b7a4-4f5d18ef6200/pig-0.17.0-core-h2.jar
+2020-11-05 15:53:50,338 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Creating symlink: /tmp/hadoop-jack/mapred/local/job_local1948336991_0001_1e051dfd-7c87-4fc2-ab15-aec20b89aebf/automaton-1.11-8.jar <- /home/jack/Desktop/ca4022/automaton-1.11-8.jar
+2020-11-05 15:53:50,341 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Localized hdfs://localhost:9000/tmp/temp-2038844801/tmp-1064825506/automaton-1.11-8.jar as file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_1e051dfd-7c87-4fc2-ab15-aec20b89aebf/automaton-1.11-8.jar
+2020-11-05 15:53:50,341 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Creating symlink: /tmp/hadoop-jack/mapred/local/job_local1948336991_0001_aecba580-034d-4e7a-9b84-e2dfd39f8c48/antlr-runtime-3.4.jar <- /home/jack/Desktop/ca4022/antlr-runtime-3.4.jar
+2020-11-05 15:53:50,345 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Localized hdfs://localhost:9000/tmp/temp-2038844801/tmp1006127472/antlr-runtime-3.4.jar as file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_aecba580-034d-4e7a-9b84-e2dfd39f8c48/antlr-runtime-3.4.jar
+2020-11-05 15:53:50,345 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Creating symlink: /tmp/hadoop-jack/mapred/local/job_local1948336991_0001_80ebc6d8-f1ed-4846-98a4-555f517222ba/joda-time-2.9.3.jar <- /home/jack/Desktop/ca4022/joda-time-2.9.3.jar
+2020-11-05 15:53:50,350 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - Localized hdfs://localhost:9000/tmp/temp-2038844801/tmp-1104623001/joda-time-2.9.3.jar as file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_80ebc6d8-f1ed-4846-98a4-555f517222ba/joda-time-2.9.3.jar
+2020-11-05 15:53:50,417 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_d5eabc55-b199-4d00-bd77-d5bbc089b514/piggybank.jar
+2020-11-05 15:53:50,417 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_28f3e8b6-e29f-4551-b7a4-4f5d18ef6200/pig-0.17.0-core-h2.jar
+2020-11-05 15:53:50,417 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_1e051dfd-7c87-4fc2-ab15-aec20b89aebf/automaton-1.11-8.jar
+2020-11-05 15:53:50,417 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_aecba580-034d-4e7a-9b84-e2dfd39f8c48/antlr-runtime-3.4.jar
+2020-11-05 15:53:50,417 [JobControl] INFO  org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-jack/mapred/local/job_local1948336991_0001_80ebc6d8-f1ed-4846-98a4-555f517222ba/joda-time-2.9.3.jar
+2020-11-05 15:53:50,423 [JobControl] INFO  org.apache.hadoop.mapreduce.Job - The url to track the job: http://localhost:8080/
+2020-11-05 15:53:50,423 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - HadoopJobId: job_local1948336991_0001
+2020-11-05 15:53:50,423 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Processing aliases movies
+2020-11-05 15:53:50,423 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - detailed locations: M: movies[11,9],movies[-1,-1],movies[13,9],movies[26,9] C:  R: 
+2020-11-05 15:53:50,424 [Thread-20] INFO  org.apache.hadoop.mapred.LocalJobRunner - OutputCommitter set in config null
+2020-11-05 15:53:50,432 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 0% complete
+2020-11-05 15:53:50,432 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_local1948336991_0001]
+2020-11-05 15:53:50,465 [Thread-20] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.textoutputformat.separator is deprecated. Instead, use mapreduce.output.textoutputformat.separator
+2020-11-05 15:53:50,466 [Thread-20] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.reduce.markreset.buffer.percent is deprecated. Instead, use mapreduce.reduce.markreset.buffer.percent
+2020-11-05 15:53:50,469 [Thread-20] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter - File Output Committer Algorithm version is 2
+2020-11-05 15:53:50,469 [Thread-20] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-11-05 15:53:50,469 [Thread-20] INFO  org.apache.hadoop.mapred.LocalJobRunner - OutputCommitter is org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigOutputCommitter
+2020-11-05 15:53:50,540 [Thread-20] INFO  org.apache.hadoop.mapred.LocalJobRunner - Waiting for map tasks
+2020-11-05 15:53:50,540 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.LocalJobRunner - Starting task: attempt_local1948336991_0001_m_000000_0
+2020-11-05 15:53:50,606 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter - File Output Committer Algorithm version is 2
+2020-11-05 15:53:50,608 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-11-05 15:53:50,639 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.Task -  Using ResourceCalculatorProcessTree : [ ]
+2020-11-05 15:53:50,644 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.MapTask - Processing split: Number of splits :1
+Total Length = 494431
+Input split[0]:
+   Length = 494431
+   ClassName: org.apache.hadoop.mapreduce.lib.input.FileSplit
+   Locations:
+
+-----------------------
+
+2020-11-05 15:53:50,660 [LocalJobRunner Map Task Executor #0] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigRecordReader - Current split being processed hdfs://localhost:9000/user/jack/input/movies.csv:0+494431
+2020-11-05 15:53:50,667 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter - File Output Committer Algorithm version is 2
+2020-11-05 15:53:50,667 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-11-05 15:53:50,693 [LocalJobRunner Map Task Executor #0] INFO  org.apache.pig.impl.util.SpillableMemoryManager - Selected heap (PS Old Gen) of size 699400192 to monitor. collectionUsageThreshold = 489580128, usageThreshold = 489580128
+2020-11-05 15:53:50,694 [LocalJobRunner Map Task Executor #0] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.
+2020-11-05 15:53:50,709 [LocalJobRunner Map Task Executor #0] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapOnly$Map - Aliases being processed per job phase (AliasName[line,offset]): M: movies[11,9],movies[-1,-1],movies[13,9],movies[26,9] C:  R: 
+2020-11-05 15:53:51,112 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.LocalJobRunner - 
+2020-11-05 15:53:51,128 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.Task - Task:attempt_local1948336991_0001_m_000000_0 is done. And is in the process of committing
+2020-11-05 15:53:51,132 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.LocalJobRunner - 
+2020-11-05 15:53:51,132 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.Task - Task attempt_local1948336991_0001_m_000000_0 is allowed to commit now
+2020-11-05 15:53:51,161 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter - Saved output of task 'attempt_local1948336991_0001_m_000000_0' to hdfs://localhost:9000/user/jack/output/movies
+2020-11-05 15:53:51,162 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.LocalJobRunner - map
+2020-11-05 15:53:51,162 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.Task - Task 'attempt_local1948336991_0001_m_000000_0' done.
+2020-11-05 15:53:51,169 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.Task - Final Counters for attempt_local1948336991_0001_m_000000_0: Counters: 24
+	File System Counters
+		FILE: Number of bytes read=464
+		FILE: Number of bytes written=6938613
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=6646529
+		HDFS: Number of bytes written=6632412
+		HDFS: Number of read operations=57
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=15
+		HDFS: Number of bytes read erasure-coded=0
+	Map-Reduce Framework
+		Map input records=9743
+		Map output records=9742
+		Input split bytes=375
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		Total committed heap usage (bytes)=470286336
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=0
+	org.apache.pig.PigWarning
+		FIELD_DISCARDED_TYPE_CONVERSION_FAILED=1
+		UDF_WARNING_1=26
+	org.apache.pig.builtin.REGEX_EXTRACT
+		UDF_WARNING_1=26
+2020-11-05 15:53:51,169 [LocalJobRunner Map Task Executor #0] INFO  org.apache.hadoop.mapred.LocalJobRunner - Finishing task: attempt_local1948336991_0001_m_000000_0
+2020-11-05 15:53:51,169 [Thread-20] INFO  org.apache.hadoop.mapred.LocalJobRunner - map task executor complete.
+2020-11-05 15:53:51,433 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 50% complete
+2020-11-05 15:53:51,433 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_local1948336991_0001]
+2020-11-05 15:53:55,447 [main] WARN  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system already initialized!
+2020-11-05 15:53:55,467 [main] WARN  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system already initialized!
+2020-11-05 15:53:55,468 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+2020-11-05 15:53:55,468 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+2020-11-05 15:53:55,468 [main] WARN  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system already initialized!
+2020-11-05 15:53:55,492 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 100% complete
+2020-11-05 15:53:55,493 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.SimplePigStats - Script Statistics: 
+
+HadoopVersion	PigVersion	UserId	StartedAt	FinishedAt	Features
+3.3.0	0.17.0	jack	2020-11-05 15:53:49	2020-11-05 15:53:55	FILTER
+
+Success!
+
+Job Stats (time in seconds):
+JobId	Maps	Reduces	MaxMapTime	MinMapTime	AvgMapTime	MedianMapTime	MaxReduceTime	MinReduceTime	AvgReduceTime	MedianReducetime	Alias	Feature	Outputs
+job_local1948336991_0001	1	0	n/a	n/a	n/a	n/a	0	0	0	0	movies	MAP_ONLY	hdfs://localhost:9000/user/jack/output/movies,
+
+Input(s):
+Successfully read 9743 records (6646529 bytes) from: "hdfs://localhost:9000/user/jack/input/movies.csv"
+
+Output(s):
+Successfully stored 9742 records (6632412 bytes) in: "hdfs://localhost:9000/user/jack/output/movies"
+
+Counters:
+Total records written : 9742
+Total bytes written : 6632412
+Spillable Memory Manager spill count : 0
+Total bags proactively spilled: 0
+Total records proactively spilled: 0
+
+Job DAG:
+job_local1948336991_0001
+
+
+2020-11-05 15:53:55,495 [main] WARN  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system already initialized!
+2020-11-05 15:53:55,497 [main] WARN  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system already initialized!
+2020-11-05 15:53:55,498 [main] WARN  org.apache.hadoop.metrics2.impl.MetricsSystemImpl - JobTracker metrics system already initialized!
+2020-11-05 15:53:55,503 [main] WARN  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Encountered Warning UDF_WARNING_1 26 time(s).
+2020-11-05 15:53:55,503 [main] WARN  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Encountered Warning FIELD_DISCARDED_TYPE_CONVERSION_FAILED 1 time(s).
+2020-11-05 15:53:55,503 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Success!
+Deleted output/movies/.pig_schema
+Deleted output/movies/_SUCCESS
+Deleted output/movies
+2020-11-05 15:53:55,615 [main] INFO  org.apache.pig.Main - Pig script completed in 8 seconds and 315 milliseconds (8315 ms)
