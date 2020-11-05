@@ -1,6 +1,6 @@
 # CA4022 Assignment 1: MovieLens With Hive and Pig
 
-This repository contains:
+[This repository](https://github.com/boylaj/ca4022_github) contains:
 
 
 * MapReduce scripts for both Hive and Pig can be found in [mapreduce/](https://github.com/boylaj/ca4022_github/tree/main/mapreduce)
