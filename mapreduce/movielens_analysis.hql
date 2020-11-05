@@ -52,16 +52,23 @@ LIMIT 10;
 
 -- get films with most genres
 
+INSERT OVERWRITE LOCAL DIRECTORY '/home/jack/Desktop/ca4022/output/hive_analysis/mostDiverseMovies' 
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY '\t'
 select title, genre
 from movies
 order by length(genre) desc
-limit 5;
+limit 500;
+
 
 -- ratings go up in 0.5s from 0.5 to 5 stars
 select distinct rating from ratings;
 
 
--- get most reviewed movies and avg ratings
+
+
+
+-- get most reviewed movieIDs and ratings info
 DROP VIEW IF EXISTS topMovieIDs;
 CREATE VIEW topMovieIDs AS
 SELECT movieID, COUNT(rating) AS ratingCount,
@@ -87,16 +94,18 @@ LIMIT 10;
 INSERT OVERWRITE LOCAL DIRECTORY '/home/jack/Desktop/ca4022/output/hive_analysis/mostRatedMovies' 
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY '\t'
-SELECT m.movieID as movieID,
-m.title as title,
-ratingCount as ratingcount,
-avgRating as avgrating,
-m.genre as genre,
-t.bestRating as bestRating,
-t.worstRating as worstRating
-FROM topMovieIDs t JOIN movies m ON t.movieID = m.movieID
-ORDER BY ratingCount DESC;
+SELECT t.*, m.year
+FROM topMovieStats t JOIN movies m on t.movieID = m.movieID
+ORDER BY ratingCount DESC
+limit 500;
 
+
+-- find the highest rated films seen more than 100 times
+select avgRating, title
+from topMovieStats
+WHERE ratingCount > 100
+ORDER BY avgRating DESC
+LIMIT 10;
 
 
 
@@ -164,10 +173,67 @@ ORDER BY avgRating DESC;
 -- add python script so that its available to mapper and reducers
 add file /home/jack/Desktop/ca4022/mapreduce/genre_col_to_row.py;
 
--- process our movie-rating data to get rows of genre and columns of stats
+-- process our movie-rating data to get rows of genre and columns of info
 INSERT OVERWRITE LOCAL DIRECTORY '/home/jack/Desktop/ca4022/output/hive_analysis/genreBreakdown' 
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY '\t' 
 SELECT TRANSFORM(*) using "python3 genre_col_to_row.py" as (genre string, numMoviesInGenre int, avgRatings double, numRatings int)
 FROM topMovieStats;
+
+
+-- find most frequent tags
+SELECT count(tag) as occurrence, tag
+FROM tags
+GROUP BY tag
+ORDER BY occurrence DESC
+LIMIT 10;
+
+
+-- Which movies (titles) are the 10 most frequently tagged and how often have they been tagged?
+select count(t.tag) as TagCount, m.title as title
+from tags as t join movies as m on ( m.movieID = t.movieID)
+GROUP BY m.movieID, m.title
+ORDER BY TagCount DESC
+LIMIT 10;
+
+
+
+/* Which 10 movies were the most controversial in 2015 (i.e., had the highest variance in
+ratings between 2015/01/01 and 2015/12/31)? 
+*/
+INSERT OVERWRITE LOCAL DIRECTORY '/home/jack/Desktop/ca4022/output/hive_analysis/controversialMovies' 
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY '\t'
+SELECT variance(r.rating) AS RatingVariance, m.title AS title,
+m.movieID FROM ratings r , movies m
+WHERE m.movieID = r.movieID
+GROUP BY m.movieID, m.title
+ORDER BY RatingVariance DESC
+LIMIT 10;
+
+
+
+-- process our rating data to get daily ratings info
+INSERT OVERWRITE LOCAL DIRECTORY '/home/jack/Desktop/ca4022/output/hive_analysis/dailyRatings' 
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY '\t'
+SELECT date(from_unixtime(tim)) as newdate,
+from_unixtime(tim, 'EEE') as dayOfWeek,
+AVG(rating) AS avgRating,
+COUNT(rating) AS ratingCount
+FROM ratings
+group by date(from_unixtime(tim)), from_unixtime(tim, 'EEE')
+order by date(from_unixtime(tim));
+
+drop view if exists dailyratings;
+create view dailyratings as 
+SELECT date(from_unixtime(tim)) as newdate,
+from_unixtime(tim, 'EEE') as dayOfWeek,
+AVG(rating) AS avgRating,
+COUNT(rating) AS ratingCount
+FROM ratings
+group by date(from_unixtime(tim)), from_unixtime(tim, 'EEE')
+order by date(from_unixtime(tim));
+
+
 
